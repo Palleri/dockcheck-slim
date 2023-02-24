@@ -30,5 +30,6 @@ chmod +x /app/regctl
 chmod +x /etc/periodic/daily/dockcheck
 cp /app/regctl /usr/bin/
 
+/etc/periodic/daily/dockcheck
 
 exec crond -f
