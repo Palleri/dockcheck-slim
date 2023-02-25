@@ -19,7 +19,7 @@ if [ -f "$NOTIFY_URLS" ]; then
                         sed -i '1i There is updates available for:' /app/notifymsg
                         notifymsg="$(cat /app/notifymsg | tr -d '\0')"
                         
-                        apprise -vvvv -t "Dockcheck-web Notify" -b "$notifymsg" "$NOTIFY_URLS"
+                        apprise -vvvv -t "Dockcheck Notify" -b "$notifymsg" "$NOTIFY_URLS"
                         rm /app/notifymsg
                 
 
@@ -27,7 +27,7 @@ if [ -f "$NOTIFY_URLS" ]; then
 
                         sed -i '1i There is updates available for:' /app/notifymsg
                         notifymsg="$(cat /app/notifymsg | tr -d '\0')"
-                        apprise -t "Dockcheck-web Notify" -b "$notifymsg" "$NOTIFY_URLS"
+                        apprise -t "Dockcheck Notify" -b "$notifymsg" "$NOTIFY_URLS"
                         rm /app/notifymsg
                 fi
         fi
