@@ -30,8 +30,6 @@ services:
     container_name: dockcheck-slim
     image: 'palleri/dockcheck-slim:latest'
     restart: unless-stopped
-    ports:
-      - '80:80'
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /etc/localtime:/etc/localtime:ro
