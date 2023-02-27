@@ -257,9 +257,6 @@ This is what worked for me
 | --- | :---: | :---: |
 | Multiple hosts one master | Unknown | |
 
-* Update via webui
-  - Need help with how to make docker.sock recreate docker-compose without the need for docker-compose.yml
-    - Docker remote API good or bad?
 
 # Bugs and fixes
 
