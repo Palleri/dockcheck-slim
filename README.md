@@ -255,7 +255,6 @@ This is what worked for me
 # Future ideas
 | Feature | Timeline | Stage |
 | --- | :---: | :---: |
-| Update via webgui | Unknown (Need Help) | |
 | Multiple hosts one master | Unknown | |
 
 * Update via webui
