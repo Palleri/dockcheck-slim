@@ -3,7 +3,8 @@ ARG TARGETPLATFORM
 ENV NOTIFY="" \
 NOTIFY_DEBUG="" \
 NOTIFY_URLS="" \
-EXCLUDE=""
+EXCLUDE="" \
+CRON_TIME=""
 COPY app /app
 RUN case ${TARGETPLATFORM} in \
          "linux/amd64")  os=amd64  ;; \

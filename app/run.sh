@@ -6,6 +6,16 @@ echo "# This might take a while, it depends on how many containers are running #
 cd /app && tar xzvf /app/docker.tgz > /dev/null 2>&1 && cp /app/docker/* /usr/bin/ > /dev/null 2>&1
 
 
+if [ -n "$CRON_TIME" ]; then
+    
+    hour=$(echo $CRON_TIME | grep -Po "\d*(?=:)")
+    minute=$(echo $CRON_TIME | grep -Po "(?<=:)\d*")
+    echo -e "$minute  $hour   *   *   *   run-parts /etc/periodic/daily" >> /app/root
+
+    else
+
+    echo -e "30 12  *   *   *   run-parts /etc/periodic/daily" >> /app/root 
+fi
 
 if [ "$NOTIFY" = "true" ]; then
     if [ -n "$NOTIFY_URLS" ]; then
