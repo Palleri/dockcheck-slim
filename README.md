@@ -256,7 +256,7 @@ This is what worked for me
 | Feature | Timeline | Stage |
 | --- | :---: | :---: |
 | Update via webgui | Unknown (Need Help) | |
-| Multiple hosts one gui | Unknown | |
+| Multiple hosts one master | Unknown | |
 
 * Update via webui
   - Need help with how to make docker.sock recreate docker-compose without the need for docker-compose.yml
