@@ -2,7 +2,8 @@ FROM alpine:latest
 ARG TARGETPLATFORM
 ENV NOTIFY="" \
 NOTIFY_DEBUG="" \
-NOTIFY_URLS=""
+NOTIFY_URLS="" \
+EXCLUDE=""
 COPY app /app
 RUN case ${TARGETPLATFORM} in \
          "linux/amd64")  os=amd64  ;; \
@@ -14,7 +15,7 @@ RUN case ${TARGETPLATFORM} in \
     esac \
 && apk add --no-cache py-pip curl bash grep \
 && curl -L "https://download.docker.com/linux/static/stable/${dockeros}/docker-23.0.1.tgz" -o /app/docker.tgz \
-&& curl -L "https://raw.githubusercontent.com/mag37/dockcheck/main/dockcheck.sh" -o /app/dockcheck.sh \
+&& curl -L "https://raw.githubusercontent.com/mag37/dockcheck/main/dc_brief.sh" -o /app/dockcheck.sh \
 #&& curl -L "https://github.com/regclient/regclient/releases/download/v0.4.5/regctl-linux-amd64" -o /app/regctl \
 && curl -L "https://github.com/regclient/regclient/releases/download/v0.4.5/regctl-linux-${os}" -o /app/regctl \
 && pip install --no-cache-dir apprise \
