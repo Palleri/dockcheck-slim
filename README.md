@@ -1,6 +1,6 @@
 # dockcheck-slim
 
-A notification service for new docker images
+A notification service for new docker images.  
 Checking for new images at startup, once a day.
 
 ## Based on [mag37/dockcheck](https://github.com/mag37/dockcheck)
