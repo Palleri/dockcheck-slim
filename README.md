@@ -26,7 +26,7 @@ docker-compose.yml
 ```yml
 version: '3.2'
 services:
-  dockcheck-web:
+  dockcheck-slim:
     container_name: dockcheck-slim
     image: 'palleri/dockcheck-slim:latest'
     restart: unless-stopped
